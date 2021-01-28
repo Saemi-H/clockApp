@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    list-style: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(70deg,#3c5166, #78a2cc, #88aed0, #96b9d0, #a5d1e6);
+    background-image: -webkit-linear-gradient(70deg,#3c5166, #78a2cc, #88aed0, #96b9d0, #a5d1e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#analogue{
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+div#analogue.hide{
+    display: none;
+}
+.num{
+    width: 100%;
+    height: 100%;
+    --rotation:0;
+    position: absolute;
+    /* left, top 안주고 width, height 100씩*/
+    text-align: center;
+    transform: rotate(var(--rotation));
+    -webkit-transform: rotate(var(--rotation));
+    font-size: 2rem;
+    font-weight: bold;
+}
+div.num1{
+  --rotation: 30deg;
+  /* background-color: red; */
+}
+div.num2{
+    --rotation: 60deg;
+    /* background-color: green; */
+  }
+  div.num3{
+    --rotation: 90deg;
+  }
+  div.num4{
+    --rotation: 120deg;
+  }
+  div.num5{
+    --rotation: 150deg;
+  }
+  div.num6{
+    --rotation: 180deg;
+  }
+  div.num7{
+    --rotation: 210deg;
+  }
+  div.num8{
+    --rotation: 240deg;
+  }
+  div.num9{
+    --rotation: 270deg;
+  }
+  div.num10{
+    --rotation: 300deg;
+  }
+  div.num11{
+    --rotation: 330deg;
+  }
+  
+  .hand{
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      width: 15px;
+      height: 60px;
+      background-color: #fff;
+      transform-origin: bottom;
+      /* 바닥이 움직이면 안되므로 */
+      transform: translateX(-50%) rotate(calc(var(--rotatior)*1deg));
+      -webkit-transform: translateX(-50%) rotate(calc(var(--rotatior)*1deg));
+  }
+  div.handh, div.handmin{
+      border-radius: 10px;
+  }
+  div.handmin{
+        height: 80px;
+  }
+  div.handsec{
+      width: 1px;
+      height: 100px;   
+  }
+
+  /* analogue */
+  #click{
+      display: none;
+  }
+  div#click.clicked{
+    display: block;
+    cursor: pointer;
+  }
+
+  #digtclock{
+      width: 100vw;
+     height: 20vh;
+      display: flex;
+      justify-content:center;
+      /* align-items:center; */
+      text-align: center;  
+  }
+  .dighour,
+  .digmin,
+  .digsec{
+      flex:0.2;
+      font-size: 2rem;
+      font-weight: bold;
+        position: relative;
+  }
+  .digsec:after,
+  .digmin:after{
+      content:":";
+      display: flex;
+      position: absolute;
+      top:0;
+      left: 0;
+  }
+  /* digtclock */
+
+ #weathermap{
+     width: 100vw;
+     height: 40vh;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+ .con{
+     width:25%;
+     height: 30%;
+     margin-right: 5%;
+     border: 1px solid #fff;
+     box-sizing: border-box;
+     text-align: center;
+     font-size: 1.6rem;
+  line-height: 150%;
+     
+ }
+ .con > span{
+  font-size: 2rem;
+  line-height: 150%;
+ }
